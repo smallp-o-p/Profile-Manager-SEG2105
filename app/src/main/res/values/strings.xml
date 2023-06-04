@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Profile Manager</string>
+    <string name="map">MAP</string>
+    <string name="name">Name:</string>
+    <string name="please_enter_a_name_here">Please enter a name here</string>
+    <string name="team_address">Team Address</string>
+    <string name="enter_zip_code">Enter ZIP Code</string>
+    <string name="team_name">Team Name</string>
+    <string name="arbitrary_title">ARBITRARY TITLE</string>
+    <string name="submit">SUBMIT</string>
+    <string name="load">LOAD FROM PHONE</string>
+</resources>

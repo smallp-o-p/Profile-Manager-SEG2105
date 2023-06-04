@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         zip = findViewById(R.id.TeamAddress);
         gmapsbtn = findViewById(R.id.GMapsButton);
 
-
         launcher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -54,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 launcher.launch(intent);
             }
         });
-        
+
         gmapsbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,10 +70,9 @@ public class MainActivity extends AppCompatActivity {
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, IntentURI);
         mapIntent.setPackage("com.google.android.apps.maps");
 
-        // check if google maps is installed, good practice for other apps too
-        if(mapIntent.resolveActivity(getPackageManager()) != null){
-            startActivity(mapIntent);
-        }
+        mapIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(mapIntent);
+
     }
 
 
